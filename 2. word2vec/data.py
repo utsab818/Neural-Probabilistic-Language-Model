@@ -33,7 +33,6 @@ def build_skipgram_pairs(tokens, word2idx, window_size=WINDOW_SIZE):
     whatever window actually exists (don't pad -- unlike the NPLM, there's
     no fixed-size input here, so a shorter window at the edges is fine).
     """
-    # TODO: implement
     center_ids = []
     context_ids = []
     for i in range(len(tokens)):
@@ -78,7 +77,6 @@ def build_negative_sampler(word_counts, power=0.75):
     to draw negative samples according to the paper's distribution instead
     of uniformly.)
     """
-    # TODO: implement
     counts_powered = np.power(word_counts, power)
     neg_probs = counts_powered / np.sum(counts_powered)
     return neg_probs

@@ -36,7 +36,6 @@ def evaluate(data):
     return loss, perplexity
 
 
-# TODO: main training loop
 # For each epoch:
 #   1. shuffle train_examples
 #   2. iterate over it in chunks of BATCH_SIZE

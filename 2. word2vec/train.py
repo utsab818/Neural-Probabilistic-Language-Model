@@ -22,11 +22,9 @@ def sample_negatives(batch_size, k):
     Draw a (batch_size, k) array of negative sample word ids, according to
     neg_probs (the count^0.75 distribution), using rng.choice(V, size=..., p=...).
     """
-    # TODO: implement
     return rng.choice(V, size=(batch_size, k), p=neg_probs)
 
 
-# TODO: main training loop
 # For each epoch:
 #   1. shuffle (center_ids, context_ids) together (same permutation for both --
 #      they're paired rows, shuffling them differently would scramble which

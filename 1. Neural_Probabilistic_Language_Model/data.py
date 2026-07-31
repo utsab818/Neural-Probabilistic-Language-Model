@@ -37,7 +37,7 @@ def build_vocab(tokens, min_count=1):
                    should be "<unk>"
     """
     from collections import Counter
-    # TODO: implement
+
     word_counts = Counter(tokens)
     vocab_words = ["<unk>"] + [word for word, count in word_counts.items() if count >= min_count]
     word2idx = {word: idx for idx, word in enumerate(vocab_words)}
@@ -60,7 +60,7 @@ def build_examples(tokens, word2idx, context_size=CONTEXT_SIZE):
     Return: a 2D int array of shape (num_examples, context_size + 1), where
     each row is [context_id_1, ..., context_id_{n-1}, target_id].
     """
-    # TODO: implement
+
     examples = []
     for i in range(context_size, len(tokens)):
         context = tokens[i - context_size:i]

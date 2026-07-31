@@ -66,7 +66,7 @@ class Word2Vec:
 
         Tip: add a tiny epsilon (1e-12) inside each log to avoid log(0).
         """
-        # TODO: implement
+
         epsilon = 1e-12
         loss_pos = -np.log(p_pos + epsilon)
         loss_neg = -np.sum(np.log(1 - p_neg + epsilon), axis=1)

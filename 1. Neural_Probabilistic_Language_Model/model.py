@@ -125,7 +125,7 @@ class NPLM:
         Optionally add L2 weight decay (param -= lr*weight_decay*param) to
         H and U only (not biases, not embeddings -- common convention).
         """
-        # TODO: implement parameter update
+
         self.C -= lr * grads["C"]
         self.H -= lr * (grads["H"] + weight_decay * self.H)
         self.d -= lr * grads["d"]
